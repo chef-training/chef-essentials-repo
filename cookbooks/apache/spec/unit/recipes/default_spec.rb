@@ -13,21 +13,20 @@ describe 'apache::default' do
       runner.converge(described_recipe)
     end
 
-
-    it "installs the correct package" do
-      expect(chef_run).to install_package("apache2")
+    it 'installs the apache package' do
+      expect(chef_run).to install_package('httpd')
     end
 
-    it "creates an default html file" do
-      expect(chef_run).to create_template("/var/www/html/index.html")
+    it 'creates an default html file' do
+      expect(chef_run).to create_template('/var/www/html/index.html')
     end
 
-    it "starts the service" do
-      expect(chef_run).to start_service("apache2")
+    it 'starts the apache service' do
+      expect(chef_run).to start_service('httpd')
     end
 
-    it "enables the service" do
-      expect(chef_run).to enable_service("apache2")
+    it 'enables the apache service' do
+      expect(chef_run).to enable_service('httpd')
     end
   end
 end
