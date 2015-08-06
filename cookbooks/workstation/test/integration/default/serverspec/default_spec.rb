@@ -8,7 +8,7 @@ describe 'workstation::default' do
   # @see http://burtlo.github.io/serverspec.github.io/resource_types.html#package
   #
   it 'installs vim' do
-    expect(package 'vim').to be_installed
+    expect(package 'vim-enhanced').to be_installed
   end
 
   #
@@ -44,7 +44,7 @@ describe 'workstation::default' do
   #
   describe 'packages' do
     it 'installs all editors' do
-      %w( vim emacs nano ).each do |name|
+      %w( vim-enhanced emacs nano ).each do |name|
         expect(package(name)).to be_installed
       end
     end
