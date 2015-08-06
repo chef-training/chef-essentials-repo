@@ -11,38 +11,38 @@ execute "apt-get update"
 #
 # @see https://docs.chef.io/resource_package.html
 #
-package "vim"
+package 'vim'
 
 #
 # The package, named "emacs", is installed
 #
 # @see https://docs.chef.io/resource_package.html
 #
-package "emacs"
+package 'emacs'
 
 #
 # The package, named "nano", is installed
 #
 # @see https://docs.chef.io/resource_package.html
 #
-package "nano"
+package 'nano'
 
 #
 # The package, named "tree", is installed
 #
 # @see https://docs.chef.io/resource_package.html
 #
-package "tree"
+package 'tree'
 
 #
 # The package, named "git", is installed
 #
 # @see https://docs.chef.io/resource_package.html
 #
-package "git"
+package 'git'
 
 #
-# The template, named "/etc/motd" is created 
+# The template, named "/etc/motd" is created
 #   with the source "motd.erb"
 #
 # @see https://docs.chef.io/resource_template.html
@@ -52,6 +52,6 @@ package "git"
 #
 # @see https://docs.chef.io/resource_template.html#file-specificity
 #
-template "/etc/motd" do
-  source "motd.erb"
+template '/etc/motd' do
+  source 'motd.erb'
 end

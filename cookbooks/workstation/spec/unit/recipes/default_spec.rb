@@ -7,31 +7,28 @@
 require 'spec_helper'
 
 describe 'workstation::default' do
-
   context 'When all attributes are default, on an unspecified platform' do
-
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new
       runner.converge(described_recipe)
     end
 
-    it "installs an appropriate text editor " do
-      expect(chef_run).to install_package("nano")
-      expect(chef_run).to install_package("vim")
-      expect(chef_run).to install_package("emacs")
+    it 'installs an appropriate text editor' do
+      expect(chef_run).to install_package('nano')
+      expect(chef_run).to install_package('vim')
+      expect(chef_run).to install_package('emacs')
     end
 
-    it "installs git" do
-      expect(chef_run).to install_package("git")
+    it 'installs git' do
+      expect(chef_run).to install_package('git')
     end
 
-    it "installs tree" do
-      expect(chef_run).to install_package("tree")
+    it 'installs tree' do
+      expect(chef_run).to install_package('tree')
     end
 
-    it "creates an /etc/motd" do
-      expect(chef_run).to create_template("/etc/motd")
+    it 'creates an /etc/motd' do
+      expect(chef_run).to create_template('/etc/motd')
     end
-
   end
 end
