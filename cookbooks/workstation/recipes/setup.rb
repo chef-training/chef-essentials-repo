@@ -1,11 +1,3 @@
-
-#
-# The execute resource, named "apt-get update", is run.
-#
-# @see https://docs.chef.io/resource_execute.html
-#
-execute "apt-get update"
-
 #
 # The package, named "vim", is installed
 #
