@@ -1,12 +1,5 @@
 
 #
-# The execute resource, named "yum update", is run.
-#
-# @see https://docs.chef.io/resource_execute.html
-#
-execute "yum update"
-
-#
 # The package, named "vim", is installed
 #
 # @see https://docs.chef.io/resource_package.html
