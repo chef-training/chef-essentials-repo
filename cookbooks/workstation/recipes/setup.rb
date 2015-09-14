@@ -1,10 +1,10 @@
 
 #
-# The execute resource, named "apt-get update", is run.
+# The execute resource, named "yum update", is run.
 #
 # @see https://docs.chef.io/resource_execute.html
 #
-execute "apt-get update"
+execute "yum update"
 
 #
 # The package, named "vim", is installed
@@ -42,7 +42,7 @@ package "tree"
 package "git"
 
 #
-# The template, named "/etc/motd" is created 
+# The template, named "/etc/motd" is created
 #   with the source "motd.erb"
 #
 # @see https://docs.chef.io/resource_template.html
