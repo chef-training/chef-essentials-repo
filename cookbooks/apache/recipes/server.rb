@@ -1,10 +1,10 @@
 
 #
-# The package, named "httpd" is installed
+# The package, named "apache2" is installed
 #
 # @see https://docs.chef.io/resource_package.html
 #
-package "httpd"
+package "apache2"
 
 #
 # The template, named "/var/www/html/index.html" is created
@@ -22,10 +22,10 @@ template "/var/www/html/index.html" do
 end
 
 #
-# The service, named "httpd", is enabled and started.
+# The service, named "apache2", is enabled and started.
 #
 # @see https://docs.chef.io/resource_service.html
 #
-service "httpd" do
+service "apache2" do
   action [ :enable, :start ]
 end
