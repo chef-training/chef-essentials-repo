@@ -5,3 +5,5 @@ license 'all_rights'
 description 'Installs/Configures workstation'
 long_description 'Installs/Configures workstation'
 version '0.2.1'
+
+depends 'haproxy', '~> 1.6.6'
