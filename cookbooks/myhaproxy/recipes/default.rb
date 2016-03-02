@@ -9,6 +9,12 @@ node.default['haproxy']['members'] = [{
     'ipaddress' => 'knife node show node1 -a cloud.public_ips',
     'port' => 80,
     'ssl_port' => 80
-  }]
+  },
+  {
+      'hostname' => 'knife node show node3 -a cloud.public_hostname',
+      'ipaddress' => 'knife node show node3 -a cloud.public_ips',
+      'port' => 80,
+      'ssl_port' => 80
+    }]
 
 include_recipe 'haproxy::default'
