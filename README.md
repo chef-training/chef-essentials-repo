@@ -60,8 +60,6 @@ $ git checkout 06-03-workstation_version_0.2.0
 07-02-apache_cookbook_version_0.2.1
 07-03-workstation_cookbook_template_resource
 07-04-workstation_cookbook_version_0.2.1
-08-00-MODULE_08
-08-01-myhaproxy_cookbook
 10-00-MODULE_10
 10-01-myhaproxy_cookbook
 11-00-MODULE_11
