@@ -4,7 +4,7 @@
 #
 # @see https://docs.chef.io/resource_package.html
 #
-package "httpd"
+package 'httpd'
 
 #
 # The template, named "/var/www/html/index.html" is created
@@ -17,8 +17,8 @@ package "httpd"
 #
 # @see https://docs.chef.io/resource_template.html#file-specificity
 #
-template "/var/www/html/index.html" do
-  source "index.html.erb"
+template '/var/www/html/index.html' do
+  source 'index.html.erb'
 end
 
 #
@@ -26,6 +26,6 @@ end
 #
 # @see https://docs.chef.io/resource_service.html
 #
-service "httpd" do
-  action [ :enable, :start ]
+service 'httpd' do
+  action [:enable, :start]
 end

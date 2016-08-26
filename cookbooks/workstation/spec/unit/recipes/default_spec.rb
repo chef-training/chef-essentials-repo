@@ -15,22 +15,12 @@ describe 'workstation::default' do
       runner.converge(described_recipe)
     end
 
-    it "installs an appropriate text editor " do
-      expect(chef_run).to install_package("nano")
-      expect(chef_run).to install_package("vim")
-      expect(chef_run).to install_package("emacs")
+    it 'installs tree' do
+      expect(chef_run).to install_package('tree')
     end
 
-    it "installs git" do
-      expect(chef_run).to install_package("git")
-    end
-
-    it "installs tree" do
-      expect(chef_run).to install_package("tree")
-    end
-
-    it "creates an /etc/motd" do
-      expect(chef_run).to create_template("/etc/motd")
+    it 'creates an /etc/motd' do
+      expect(chef_run).to create_template('/etc/motd')
     end
 
   end
